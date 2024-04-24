@@ -11,6 +11,9 @@ gem "sprockets-rails"
 # Simple form
 gem "simple_form"
 
+# Faker
+gem "faker"
+
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 

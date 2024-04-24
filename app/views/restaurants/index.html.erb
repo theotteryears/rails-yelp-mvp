@@ -1,0 +1,14 @@
+<div class="container text-center mt-3 p-3 border">
+<h1>All Restaurants</h1>
+<div class="container text-start p-3 border">
+  <ul class="list-group">
+    <% @restaurants.each do |restaurant| %>
+      <li class="list-group-item">
+        <%= restaurant.name %>
+        <br><%= restaurant.address %>
+        <br><%= restaurant.category %>
+      </li>
+    <% end %>
+  </ul>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="container text-center mt-3 p-3 border">
+
+  <h1>Add a New Restaurant</h1>
+
+  <div class="container text-start p-3 border">
+    <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :category, collection: Restaurant::CATEGORIES %>
+    <%= f.submit "Add new restaurant", class: "btn btn-primary"%>
+    <% end %>
+  </div>
+
+</div>

@@ -1,0 +1,29 @@
+<div class="container text-center mt-5 border">
+
+  <h1 class="mt-3">Restaurant</h1>
+
+  <div class="container text-start p-3 border">
+    <%= @restaurant.name %>
+    <br><%= @restaurant.address %>
+    <br><%= @restaurant.category %>
+  </div>
+
+  <h1 class="mt-3">Reviews</h1>
+
+  <%= link_to "Add a new review", new_restaurant_review_path(@restaurant), class: "btn btn-primary m-3" %>
+
+  <div class="container text-start p-3 border">
+    <ul class="list-group">
+      <% @restaurant.reviews.each do |review| %>
+        <li class="list-group-item">
+          <%= review.content %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="p-3">
+  <%= link_to "Back to restaurants list", restaurants_path %>
+  </div>
+
+</div>
